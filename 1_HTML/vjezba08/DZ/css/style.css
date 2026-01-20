@@ -1,0 +1,90 @@
+@font-face{
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+body{
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    background-color: #10151e;
+    color: #fff;
+}
+
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #354a5e;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    float: left;
+
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #111111;
+}
+
+.menu ul li a.active {
+  background-color: #1abc9d;
+}
+
+.pocetnaNaslov{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+p{
+    text-align: center;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-areas: 
+    "a b c";
+    column-gap: 10px;
+    padding-top: 50px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.pocetnaKucica{
+    width: 375px;
+    height: 320px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.a{
+    grid-area: a;
+    
+}
+
+.b{
+    grid-area: b;
+}
+
+.c{
+    grid-area: c;
+}
+
+.pocetnaSlika{
+    display: block;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
