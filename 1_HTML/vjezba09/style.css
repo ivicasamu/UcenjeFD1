@@ -2,6 +2,28 @@ body{
     font-family: sans-serif;
 }
 
+div.k{
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d";
+    gap: 2rem;
+}
+
+.a{grid-area: a;}
+.b{grid-area: b;}
+.c{grid-area: c;}
+.d{grid-area: d;}
+
 ul{
     list-style-type: none;
     padding: 0;
@@ -27,12 +49,20 @@ li{
     body{
         background-color: aqua;
     }
+    .container{
+        grid-template-areas: 
+        "a b"
+        "c d";
+    }
 }
 
 /* Tablet pejzažno*/
 @media(orientation: landscape) and (min-width:450px){
     body{
         background-color: blueviolet;
+    }
+    .container{
+        grid-template-areas: "a b c d";
     }
 }
 
@@ -45,10 +75,13 @@ li{
     body{
         background-color: white;
     }
+    .container{
+        grid-template-areas: "a b c d";
+    }
 }
 
 @media print{
-    nav{
+    nav, div.container{
         display: none;
     }
 }
