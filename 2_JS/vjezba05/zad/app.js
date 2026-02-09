@@ -14,11 +14,29 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // Ispis: "Pauza programa"
 
       // rješavanje 1. zadatak
-        if(a === 'start' || a === 'stop' ||a === 'pause'){
-          rezultat.innerHTML = `Program ${a}ed`;
-        }
+        // if(a === 'start' || a === 'stop' ||a === 'pause'){
+        //   rezultat.innerHTML = `Program ${a}ed`;
+        // }
 
-        return;
+        // return;
+
+        switch(true){
+          case a === 'start':
+            rezultat.innerHTML = 'Start programa';
+            return;
+
+          case a === 'stop':
+            rezultat.innerHTML = 'Zaustavljanje programa';
+            return;
+          
+          case a === 'pause':
+            rezultat.innerHTML = 'Pauziranje programa';
+            return;
+          
+          default:
+            rezultat.innerHTML = 'Nepoznata naredba';
+            return;
+        }
       // kraj rješavanje 1. zadatak
     break;
     case '2':
@@ -28,12 +46,30 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // "Nije položio" za "D" i "F"
 
       // rješavanje 2. zadatak
-        if(a === "A" || a === "B" || a === "C"){
-          rezultat.innerHTML = 'Položio';
-        } else if(a === "D" || a === "E" || a === "F"){
-          rezultat.innerHTML = 'Nije položio';
-        } 
-        return;
+        // if(a === "A" || a === "B" || a === "C"){
+        //   rezultat.innerHTML = 'Položio';
+        // } else if(a === "D" || a === "E" || a === "F"){
+        //   rezultat.innerHTML = 'Nije položio';
+        // } 
+        // return;
+
+        switch(a){
+          case "A":
+          case "B":
+          case "C":
+            rezultat.innerHTML = 'Položio';
+            return;
+
+          case "D":
+          case "E":
+          case "F":
+            rezultat.innerHTML = 'Nije položio';
+          
+          default:
+            rezultat.innerHTML = 'Nevažeća vrijednost bodova';
+            return;
+        }
+
       // kraj rješavanje 2. zadatak
     break;
     case '3':
