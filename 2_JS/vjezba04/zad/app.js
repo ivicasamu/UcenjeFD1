@@ -138,6 +138,119 @@ document.getElementById('izvedi').addEventListener('click', () => {
     return
   }
 
+  /* ZADATAK 9. 
+  Zbroj većih brojeva (A i B) + (C i D) */
+
+  if(zadatak === '9'){
+    console.log('Rješavam zadatak 9');
+
+    const x = Number(a);
+    const y = Number(b);
+    const z = Number(c);
+    const w = Number(d);
+
+    if(!x || !y || !z || !w){
+      rezultat.innerHTML = 'Jedan od unosnih polja nije broj';
+    }
+
+    if(x > y){
+      prviBroj = x;
+    } else if(x < y) {
+      prviBroj = y
+    } else if(x === y){
+      rezultat.innerHTML = 'A i B su jednaki brojevi'
+      return;
+    }
+
+    if(z > w){
+      drugiBroj = z;
+    } else if(z < w){
+      drugiBroj = w;
+    } else if(z === w){
+      rezultat.innerHTML = 'C i D su jednaki brojevi'
+      return;
+    }
+
+    rezultat.innerHTML = 'Rezultat je ' + (prviBroj + drugiBroj);
+
+    return;
+  }
+
+  /* ZADATAK 10 
+  Za upisani broj u polju D ispiši 10 puta veći broj*/
+
+  if(zadatak === '10'){
+    const x = Number(d);
+    if (x === 0){
+      rezultat.innerHTML = '0 se ne može množiti';
+      return;
+    } else if(!x){
+      rezultat.innerHTML = 'D nije broj';
+      return;
+    }
+
+    rezultat.innerHTML = (x * 10) + ' je 10 puta uvećani broj ' + x;
+
+
+    return;
+  }
+
+  /* ZADATAK 11 
+  Za unesenom ime grada u polje B ispiši da li je sjedište Edunove ili ne*/
+
+  if(zadatak === '11'){
+    if(!b){
+      rezultat.innerHTML = 'Obavezan unos grada u polje B';
+      return;
+    }
+
+    if(b === 'Osijek'){
+      rezultat.innerHTML = `${b} je sjedište Edunove`;
+    } else {
+      rezultat.innerHTML = `${b} nije sjedište Edunove`;
+    }
+    
+    return;
+  }
+
+  /* ZADATAK 12.
+  Za upisane pojmove u polju A i B ispiši jedno pokraj drugoga */
+
+  if(zadatak === '12'){
+
+    if(!a || !b){
+      rezultat.innerHTML = 'Obavezan unos u polj A ili B';
+      return;
+    }
+
+    rezultat.innerHTML = `${a} ${b}`;
+
+    return;
+  }
+
+
+  /* ZADATAK 13.
+  Ispiši umnožak broja A i B */
+
+  if(zadatak === "13"){
+    const x = Number(a);
+    const y = Number(b)
+
+    if(x === 0 || y === 0){
+      rezultat.innerHTML = 'Jedan od unešenih brojeva je 0';
+      return;
+    } else if(!x || !y){
+      rezultat.innerHTML = 'Unešeni podataci nisu broj';
+      return;
+    }
+
+    rezultat.innerHTML = `Umnožak brojeva A i B je ${x*y}`
+
+    return;
+  }
+
+
+
   if(zadatak === '3'){
     const x = Number(a);
     if(!x){
