@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIKEND ZADACI</title>
+    <link id="theme-link" rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>VIKEND ZADACI</h1>
+        
+      </header>
+
+      <section class="card">
+         <div class="controls">
+          <label class="selectWrap">
+            <span>Odaberi zadatak</span>
+            <select id="zadatak">
+              <option value="1" selected="selected">1. Prvi i zadnji element </option>
+              <option value="2">2. Siguran pristup elementu </option>
+              <option value="3">3. Zamjena prva dva elementa </option>
+              <option value="4">4. Dodavanje elementa prema duljini </option>
+              <option value="5">5. Provjera tipa prvog elementa </option>
+              <option value="6">6. Ukloni zadnji element bez pop() </option>
+              <option value="7">7. Spoji dva niza bez concat() </option>
+              <option value="8">8. Provjera rupe u nizu </option>
+              <option value="9">9. Razdvajanje prvog i ostatka </option>
+              <option value="10">10. Switch prema duljini niza </option>
+            </select>
+          </label>
+
+         
+        </div>
+
+        <div c®lass="grid">
+          <label class="field">
+            <span>A</span>
+            <input id="a" type="text" />
+          </label>
+          <label class="field">
+            <span>B</span>
+            <input id="b" type="text" />
+          </label>
+        </div>
+        <hr>
+        <div class="grid">
+        <button id="izvedi" class="btn" type="button">Izvedi</button>
+        </div>
+        
+      
+      </section>
+
+      <section class="resultCard">
+        <h2>Rezultat</h2>
+        <div id="rezultat" class="result" aria-live="polite">—</div>
+      </section>
+
+      <footer class="footer">
+        <small>Kopirano iz predložka zadaci EDUNOVA</small>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
