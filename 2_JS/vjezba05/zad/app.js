@@ -69,9 +69,9 @@ document.getElementById('izvedi').addEventListener('click', () => {
             rezultat.innerHTML = 'Nevažeća vrijednost bodova';
             return;
         }
-
+        break;
       // kraj rješavanje 2. zadatak
-    break;
+    
     case '3':
       // 3. zadatak
       // Napiši program koji prima broj bodova (0–100) i ispisuje ocjenu:
@@ -84,41 +84,96 @@ document.getElementById('izvedi').addEventListener('click', () => {
 
       // rješavanje 3. zadatak
 
-        switch (true) {
-          case a > 0 && a <= 49:
-            console.log(a);
-            rezultat.innerHTML = 'Nedovoljan';
-            return;
-            
-          case a >= 50 && a <= 64:
-            rezultat.innerHTML = 'Dovoljan';
-            return;
-
-          case a >= 65 && a <= 79:
-            rezultat.innerHTML = 'Dobar';
-            return;
-
-          case a >= 80 && a <= 89:
-            rezultat.innerHTML = 'Vrlo dobar';
-            return;
-
-          case a >= 90 && a <= 100:
-            rezultat.innerHTML = 'Odličan';
-            return;
+      switch (true) {
+        case a > 0 && a <= 49:
+          console.log(a);
+          rezultat.innerHTML = 'Nedovoljan';
+          return;
           
-          default:
-            console.log(a)
-            rezultat.innerHTML = 'Bodovi moraju biti 0-100'
-            return;
-        }
+        case a >= 50 && a <= 64:
+          rezultat.innerHTML = 'Dovoljan';
+          return;
 
+        case a >= 65 && a <= 79:
+          rezultat.innerHTML = 'Dobar';
+          return;
+
+        case a >= 80 && a <= 89:
+          rezultat.innerHTML = 'Vrlo dobar';
+          return;
+
+        case a >= 90 && a <= 100:
+          rezultat.innerHTML = 'Odličan';
+          return;
+        
+        default:
+          console.log(a)
+          rezultat.innerHTML = 'Bodovi moraju biti 0-100'
+          return;
+      }
+      break;
       // kraj rješavanje 3. zadatak
-    break;
 
     case '4':
+    // rješavanje 4. zadatak
       rezultat.innerHTML=a.length
-  
-      break
+      return;
+
+    break;
+    // kraj rješavanje 4. zadatak
+
+    case '5':
+      // 5. zadatak
+      // Za upisani decimalni broj ispiši samo decimalni dio
+      // rješavanje 5. zadatak
+      const x = parseFloat(a)
+      if(!x){
+        rezultat.innerHTML = 'Niste unijeli dobru vrijednost';
+        return;
+      }
+
+      const cijeliBroj = parseInt(a);
+      rezultat.innerHTML = parseInt((x - cijeliBroj) * 100);
+
+    break;
+      // kraj rješavanje 5. zadatak
+
+
+    case '6':
+      // Zadatak 6. 
+      // Za uneseni broj ispiši da li je broj para/neparan
+      // rješavanje 6. zadatak
+      const y = Number(a);
+      if(!y){
+        rezultat.innerHTML = 'Niste unijeli broj';
+        return;
+      }if(y%2 === 0){
+        rezultat.innerHTML = 'Unešeni broj je paran';
+      } else {
+        rezultat.innerHTML = 'Unešeni broj je neparan';
+      }
+
+      // kraj rješavanje 6. zadatak
+    break;
+
+    case '7':
+      // Zadatak 7.
+      // Za uneseno ime namjernice ispiši dali je voće
+      // rješavanje 6. zadatak
+      switch(a.toLowerCase()){
+        case 'jabuka':
+        case 'kruška':
+        case 'banana':
+          rezultat.innerHTML = 'Voće je';
+          break;
+        
+        default:
+          rezultat.innerHTML = 'Ne mogu odrediti da li je voće';
+      }
+
+
+      // kraj rješavanje 6. zadatak
+    break;
 
     default:
       rezultat.innerHTML = `Nepoznati zadatak ${zadatak}`;
