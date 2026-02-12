@@ -175,6 +175,33 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // kraj rješavanje 6. zadatak
     break;
 
+    case '8':
+      // Zadatak 8.
+      // Za unešeni broj ispiši sve brojeve od 1 do tog broja odvojeno zarezom
+      // rješavanje 8. zadatak
+      const doBroja = Number(a);
+
+      if(!doBroja){
+        rezultat.innerHTML = 'Nije unešen broj.'
+        return;
+      }
+
+      let s = ''
+
+      for(let i=1; i<=doBroja; i++){
+        console.log(i + ',');
+        if(i===doBroja){
+          s += i;
+        }else{
+          s += i + ', ';
+        }
+      }
+      rezultat.innerHTML = s;
+
+      
+
+    break;
+
     default:
       rezultat.innerHTML = `Nepoznati zadatak ${zadatak}`;
   }
