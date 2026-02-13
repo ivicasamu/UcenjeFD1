@@ -8,12 +8,76 @@ document.getElementById('izvedi').addEventListener('click', () => {
 
   switch (zadatak) {
     case '1':
+      // Zadatak 1. 
+      // Za uneseni cijeli broj u polje A veći od 2 i manji od 10M ispiši da li je prim (prosti) broj ili ne.
       // rješavanje 1. zadatak
+
+      const a1 = Number(a);
+
+      if(!a1){
+        rezultat.innerHTML = 'Nije unešen broj';
+        return;
+      }
+
+      if(a1<2 || a1>10000000){
+        rezultat.innerHTML = 'Unešeni broj mora biti između dva i deset milijuna';
+        return;
+      }
+
+      let prim = true;
+      let brojac = 1;
+
+      for(let i=2; i<a1; i++){
+        if(brojac++ % 1000 === 0){
+          console.log(brojac, a1, ' % ', i, ' = ', a1 % i);
+        }
+      
+        if(a1%i === 0){
+          cjelobrojnoDjeljiv = i;
+          prim = false;
+          break;
+        }
+      }
+
+      if(prim){
+        rezultat.innerHTML = `${a1} je PRIM broj`;
+      } else {
+        rezultat.innerHTML = `(${brojac}) ${a1} nije PRIM broj jer je cjelobrojno djeljiv s ${cjelobrojnoDjeljiv}`;
+      }
+
 
       // kraj rješavanje 1. zadatak
     break;
     case '2':
+      // Zadatak 2. 
+      // Za uneseni cijeli broj u polje B veći od 2 i manji od 1000 ispiši da li je savršen broj ili ne.
       // rješavanje 2. zadatak
+
+      const b1 = Number(b);
+
+      if(!b1){
+        rezultat.innerHTML = 'Nije unešen broj';
+        return;
+      }
+
+      if(b1<2 || b1>1000){
+        rezultat.innerHTML = 'Unešeni broj mora biti između dva i tisuću';
+        return;
+      }
+
+      let suma = 0;
+
+      for(let i=1; i<b1; i++){
+        if(b1%i === 0){
+          suma += i;
+        }
+      }
+
+      if(suma === b1){
+        rezultat.innerHTML = `${b1} je savršen broj`;
+      } else {
+        rezultat.innerHTML = `${b1} nije savršen broj`;
+      }
 
       // kraj rješavanje 2. zadatak
     break;
@@ -47,9 +111,6 @@ document.getElementById('izvedi').addEventListener('click', () => {
       rezultat.innerHTML = `Nepoznati zadatak ${zadatak}`;
   }
 
-  
-  // ovo će se ispisati ako u HTML dodatke option za zadatak a ovdje ga ne obradite
-  rezultat.innerHTML = `Nepoznati zadatak ${zadatak}`;
 });
 const poveznica = document.getElementById('poveznica');
 poveznica.href='https://enciklopedija.hr/clanak/primbrojevi';
