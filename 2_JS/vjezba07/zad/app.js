@@ -82,26 +82,135 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // kraj rješavanje 2. zadatak
     break;
     case '3':
+      // Zadatak 3. 
+      // Za uneseni cijeli broj u polje B veći od 2 i manji od 100 ispiši da li je Armstrongov broj ili ne.
       // rješavanje 3. zadatak
+      const b3 = Number(b)
+
+      if(!b3){
+        rezultat.innerHTML = 'Nije unešen broj';
+        return;
+      }
+      
+      if(b3<2 || b3>1000){
+        rezultat.innerHTML = 'Unešeni broj mora biti između dva i sto';
+        return;
+      }
+
+      let sumaCase3 = 0
+
+      for(const broj of b){
+        meduBroj = Number(broj);
+        sumaCase3 = sumaCase3 + (meduBroj*meduBroj*meduBroj)
+      }
+
+      if(sumaCase3 === b3){
+        rezultat.innerHTML = `${b3} je Armstrongov broj`;
+      } else {
+        rezultat.innerHTML = `${b3} nije Armstrongov broj`;
+      }
+  
+
 
       // kraj rješavanje 3. zadatak
     break;
     case '4':
+      // Zadatak 4. 
+      // Za unesenu riječ u polje A provjerite da li je palindrom ili ne
       // rješavanje 4. zadatak
+
+      const unesenaRijec = String(a)
+
+      if(!unesenaRijec){
+        rezultat.innerHTML = 'Polje A je prazno, unesite riječ';
+        return;
+      } else if(Number(unesenaRijec)){
+        rezultat.innerHTML = 'Unesen je broj, unesite riječ';
+        return;
+      }
+
+      rijecNaopako = '';
+
+      for(let i=unesenaRijec.length; i>0; i--){
+        rijecNaopako += unesenaRijec[i-1];
+        console.log(unesenaRijec[i-1])
+      }
+
+      console.log(unesenaRijec, rijecNaopako);
+
+      if(rijecNaopako === unesenaRijec){
+        rezultat.innerHTML = `${unesenaRijec} je palidrom`;
+      } else {
+        rezultat.innerHTML = `${unesenaRijec} nije palidrom`;
+      }
 
       // kraj rješavanje 4. zadatak
     break;
     case '5':
+      // Zadatak 5. 
+      // Provjeri da li u nizu stopRijeci postoji riječ pronađena u polju B
       // rješavanje 5. zadatak
+
+      const b5 = b.toLowerCase();
+      pronasaoRijec = false;
+
+      if(!b5){
+        rezultat.innerHTML = 'Polje B je prazno, unesite riječ';
+        return;
+      }
+
+      for(let i=0; i<stopRijeci.length; i++){
+        if(b5 === stopRijeci[i]){
+          pronasaoRijec = true;
+          break;
+        }
+      }
+
+      if(pronasaoRijec === true){
+        rezultat.innerHTML = `Riječ '${b}' se nalazi u nizu stopRijeci`;
+      } else {
+        rezultat.innerHTML = `Riječ '${b}' se ne nalazi u nizu stopRijeci`;
+      }
+
 
       // kraj rješavanje 5. zadatak
     break;
     case '6':
+      // Zadatak 6.
+      // Za unesenu riječ u polju A ispiši koliko ima samoglasnika i koliko suglasnika
       // rješavanje 6. zadatak
+      const b6 = String(b).toLowerCase();
+
+      const samoglasnici = ['a','e', 'i', 'o', 'u'];
+      let brojSamoglasnika = 0
+
+      if(!b6){
+        rezultat.innerHTML = 'Polje B je prazno, unesite riječ';
+        return;
+      } else if(Number(b6)){
+        rezultat.innerHTML = 'Unesen je broj, unesite riječ';
+        return;
+      }
+
+      for(let i=0; i<b6.length; i++){
+        for(let j=0; j<samoglasnici.length; j++){
+          if(b6[i] === samoglasnici[j]){
+            brojSamoglasnika++;
+          }
+        }
+      }
+
+      const brojSuglasnika = b6.length - brojSamoglasnika
+
+      rezultat.innerHTML = `U riječi ${b6} ima ${brojSuglasnika} suglasnika i ${brojSamoglasnika} samoglasnika`;
+
+
 
       // kraj rješavanje 6. zadatak
     break;
     case '7':
+      // Zadatak 7.
+      // Ispiši sve brojeve odvojeno znakom tab (\t) između A i B ili B i A. 
       // rješavanje 7. zadatak
 
       // kraj rješavanje 7. zadatak
