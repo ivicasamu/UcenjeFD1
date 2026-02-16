@@ -210,8 +210,34 @@ document.getElementById('izvedi').addEventListener('click', () => {
     break;
     case '7':
       // Zadatak 7.
-      // Ispiši sve brojeve odvojeno znakom tab (\t) između A i B ili B i A. 
+      // Ispiši sve brojeve odvojeno znakom tab (\t) između A i B ili B i A. (ako je broj A<B onda se ispisuje od A do B ++, a ako je A>B onda se ispisuje od A do B --)
       // rješavanje 7. zadatak
+      a7 = Number(a);
+      b7 = Number(b);
+
+      if(!a7 && !b7){
+        rezultat.innerHTML = 'U polje A i B nisu upisani brojevi.';
+      } else if(!a7){
+        rezultat.innerHTML = 'U polje A nije upisan broj.'
+      } else if(!b7){
+        rezultat.innerHTML = 'U polje B nije upisan broj.'
+      } else if(a7 === b7){
+        rezultat.innerHTML = 'U polja A i B unesite razlličite brojeve';
+      }
+
+      ispisBroja = '';
+
+      if(a7<b7){
+        for(let i=a7+1; i<b7; i++){
+          ispisBroja += `${i} \t`;
+        }
+      } else if(b7<a7){
+        for(let i=a7-1; i>b7; i--){
+          ispisBroja += `${i} \t`;
+        }
+      }
+
+      rezultat.innerHTML = ispisBroja
 
       // kraj rješavanje 7. zadatak
     break;
