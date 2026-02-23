@@ -119,7 +119,7 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // Za unesenu riječ u polje A provjerite da li je palindrom ili ne
       // rješavanje 4. zadatak
 
-      const unesenaRijec = String(a)
+      const unesenaRijec = String(a).toLowerCase
 
       if(!unesenaRijec){
         rezultat.innerHTML = 'Polje A je prazno, unesite riječ';
