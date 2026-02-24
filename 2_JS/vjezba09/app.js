@@ -74,3 +74,18 @@ function zbrojPrimBrojeva(odBroja,doBroja){
 }
 
 log(zbrojPrimBrojeva(3,80));
+
+
+const pozdravArrow = () => console.log('Hello Arrow');
+
+pozdravArrow();
+
+const brojevi = {
+    slucajniBroj: () =>{
+
+        return 7;
+    },
+    nula: () => {return 0}
+}
+
+log(brojevi['slucajniBroj']());
