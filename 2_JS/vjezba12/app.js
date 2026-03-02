@@ -53,3 +53,18 @@ console.log(korisnici.findIndex(o=>o.ime==='Žana'));
 
 console.log('***********************');
 
+console.log(korisnici.filter(o => o.godina>40));
+
+console.log('***********************');
+
+console.log(korisnici.reduce((suma,o) => suma + o.godina, 0));
+
+console.log('***********************');
+
+const imaAdmin = korisnici.some(o => o.admin);
+console.log(imaAdmin ? 'Ima admin' : 'Nema admin');
+
+console.log('***********************');
+
+const sviPunoljetni = korisnici.every( o=> o.godina >= 18);
+console.log(sviPunoljetni ? 'Svi su punoljetni' : 'Nisu svi punoljetni');
