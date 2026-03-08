@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+</head>
+<body>
+
+    <div id="app">
+        <p>Trenutni broj je</p>
+        <h1>
+            {{brojac}}
+        </h1>
+        <button @click="povecaj">Povećaj</button>
+        <button @click="smanji">Smanji</button>
+        <hr>
+        <a @click="plus2"href="#">Povećaj za 2</a>
+        <a @click="minus2"href="#">Smanji za 2</a>
+    </div>
+    
+    <script src="vue.3.5.29.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
