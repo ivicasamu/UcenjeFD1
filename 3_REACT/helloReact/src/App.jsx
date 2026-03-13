@@ -1,12 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container} from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Button, Card, Container, Nav, Navbar, NavDropdown, Table } from 'react-bootstrap';
 import react from './assets/react.svg';
-import Table from 'react-bootstrap/Table';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './App.css'
 
 function App() {
@@ -18,7 +12,7 @@ function App() {
       <a href="moduli/index.html">Moduli</a>
 
       <hr />
-
+    
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
