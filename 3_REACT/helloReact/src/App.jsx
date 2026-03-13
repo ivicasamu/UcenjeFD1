@@ -14,6 +14,11 @@ function App() {
   return (
 
     <Container>
+
+      <a href="moduli/index.html">Moduli</a>
+
+      <hr />
+
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
