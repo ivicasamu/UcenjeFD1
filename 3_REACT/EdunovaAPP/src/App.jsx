@@ -17,7 +17,7 @@ function App() {
         <Route path={RouteNames.SMJEROVI} element={<SmjerPregled />} />
       </Routes>
       <hr />
-      &copy, Edunova
+      &copy; Edunova
     </Container>
   )
 }
