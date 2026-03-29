@@ -93,6 +93,10 @@ export default function SmjerPromjena(){
                         <Button type="submit" variant="success">
                             Promjeni smjer
                         </Button>
+                        &nbsp;&nbsp;
+                        <Button variant="danger" onClick={()=>{obrisi(korisnik.sifra)}}>
+                            Obriši
+                        </Button>
                     </Col>
                 </Row>
             </Form>
