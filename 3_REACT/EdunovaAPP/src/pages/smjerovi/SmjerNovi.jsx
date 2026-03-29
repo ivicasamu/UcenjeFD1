@@ -8,7 +8,7 @@ export default function SmjerNovi(){
     const navigate = useNavigate()
 
     async function dodaj(smjer){
-        //console.table(smjer)
+        // console.table(smjer)
         await SmjerService.dodaj(smjer).then(()=>{
             navigate(RouteNames.SMJEROVI)
         })
