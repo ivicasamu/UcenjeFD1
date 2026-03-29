@@ -1,11 +1,17 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RouteNames } from "../../constants";
+import SmjerService from "../../services/smjerovi/SmjerService";
 
 export default function SmjerNovi(){
 
+    const navigate = useNavigate()
+
     async function dodaj(smjer){
-        console.log(smjer)
+        //console.table(smjer)
+        await SmjerService.dodaj(smjer).then(()=>{
+            navigate(RouteNames.SMJEROVI)
+        })
     }
 
     function odradiSubmit(e){
