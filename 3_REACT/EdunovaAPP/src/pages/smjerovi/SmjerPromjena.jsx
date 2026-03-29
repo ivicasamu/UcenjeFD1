@@ -28,7 +28,7 @@ export default function SmjerPromjena(){
 
     async function promjeni(smjer){
         // console.table(smjer)
-        await SmjerService.promjeni(smjer).then(()=>{
+        await SmjerService.promjeni(params.sifra, smjer).then(()=>{
             navigate(RouteNames.SMJEROVI)
         })
     }
