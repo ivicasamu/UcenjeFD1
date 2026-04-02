@@ -6,3 +6,6 @@ export const RouteNames = {
     SMJEROVI_NOVI: '/smjerovi/novi',
     SMJEROVI_PROMJENA: '/smjerovi/:sifra'
 }
+
+// memorija, localStorage, firebase
+export const DATA_SOURCE = 'localStorage';
